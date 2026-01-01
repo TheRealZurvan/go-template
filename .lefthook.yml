@@ -1,4 +1,14 @@
+commit-msg:
+  commands:
+    cog:
+      run: cog verify --ignore-merge-commits --file {1}
+
 pre-commit:
   commands:
     lint:
-      run: moon -q :lint
+      run: mise run lint
+
+pre-push:
+  commands:
+    cog:
+      run: cog check --ignore-merge-commits

@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-# Installing Moonrepo proto https://moonrepo.dev/proto
-bash -c "$$(curl -fsSL https://moonrepo.dev/install/proto.sh)"
+# Installing mise https://mise.jdx.dev
+curl https://mise.run | sh
 
-# Installing all the other tools with the proto
-proto use
+# Activate mise for current shell session
+eval "$(~/.local/bin/mise activate bash)"
 
-# Running the Moon setup task at the end
-moon :setup
+# Installing all tools defined in mise.toml
+mise install
+
+# Running the setup task
+mise run setup

@@ -1,0 +1,25 @@
+[tasks.clean]
+run = "rm -rf bin"
+
+[tasks.setup]
+run = "go mod download && lefthook install"
+
+[tasks.format]
+run = "golangci-lint run -c configs/golangci.yml --fix --allow-parallel-runners --issues-exit-code 0 > /dev/null"
+
+[tasks.lint]
+run = "golangci-lint run -c configs/golangci.yml --allow-parallel-runners"
+
+[tasks.test]
+run = "go test ./..."
+
+[tasks.build]
+env = { CGO_ENABLED = "0", GOOS = "linux", GOARCH = "amd64" }
+run = 'go build -ldflags="-s -w" -trimpath -o bin/app cmd/app/main.go'
+
+[tasks.run]
+run = "go run ./cmd/app"
+
+[tasks.start]
+depends = ["build"]
+run = "./bin/app"
