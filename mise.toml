@@ -23,3 +23,6 @@ run = "go run ./cmd/app"
 [tasks.start]
 depends = ["build"]
 run = "./bin/app"
+
+[tasks.act-pr]
+run = 'act pull_request --secret-file .env -e .github/act/pull_request.json -j checks'
