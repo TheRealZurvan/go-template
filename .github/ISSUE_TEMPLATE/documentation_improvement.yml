@@ -1,15 +1,10 @@
 name: Documentation Improvement
 description: Suggest improvements to our documentation
 title: "docs: "
-labels: ["documentation"]
-assignees: []
+labels: [ "documentation" ]
+assignees: [ ]
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to help us improve our documentation!
-
   - type: dropdown
     id: doc-type
     attributes:
@@ -25,7 +20,6 @@ body:
         - Other (please specify in description)
     validations:
       required: true
-
   - type: input
     id: location
     attributes:
@@ -34,7 +28,6 @@ body:
       placeholder: e.g., README.md or https://github.com/user/repo/blob/main/docs/guide.md
     validations:
       required: true
-
   - type: textarea
     id: current-state
     attributes:
@@ -43,7 +36,6 @@ body:
       placeholder: The current documentation is missing information about...
     validations:
       required: true
-
   - type: textarea
     id: improvement
     attributes:
@@ -52,7 +44,6 @@ body:
       placeholder: I suggest adding/changing...
     validations:
       required: true
-
   - type: textarea
     id: additional-context
     attributes:
@@ -60,22 +51,3 @@ body:
       description: Add any other context about the documentation improvement here.
     validations:
       required: false
-
-  - type: dropdown
-    id: willing-to-help
-    attributes:
-      label: Are you willing to help improve this documentation?
-      options:
-        - Yes, I can submit a PR with the changes
-        - No, I'm just suggesting the improvement
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this documentation improvement, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
