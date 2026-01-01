@@ -2,7 +2,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.24.5-blue.svg)](https://golang.org/doc/devel/release.html)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Go Report Card](https://goreportcard.com/badge/github.com/tab-sama/go-template)](https://goreportcard.com/report/github.com/tab-sama/go-template)
+[![Go Report Card](https://goreportcard.com/badge/github.com/TheRealZurvan/go-template)](https://goreportcard.com/report/github.com/TheRealZurvan/go-template)
 [![moonrepo](https://img.shields.io/badge/moonrepo-managed-blue.svg)](https://moonrepo.dev)
 [![lefthook](https://img.shields.io/badge/lefthook-enabled-green.svg)](https://github.com/evilmartians/lefthook)
 [![golangci-lint](https://img.shields.io/badge/golangci--lint-enabled-brightgreen.svg)](https://golangci-lint.run/)
@@ -240,7 +240,7 @@ go-template/
 
 To customize this template for your project:
 
-1. **Update go.mod** with your module path (replace `github.com/tab-sama/go-template`)
+1. **Update go.mod** with your module path (replace `github.com/TheRealZurvan/go-template`)
 2. **Modify the application** in `cmd/app/main.go` to fit your needs
 3. **Add your business logic** in the `internal/` directory
 4. **Adjust golangci-lint config** in `configs/golangci.yml` as needed
