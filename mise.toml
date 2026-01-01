@@ -5,10 +5,10 @@ run = "rm -rf bin"
 run = "go mod download && lefthook install"
 
 [tasks.format]
-run = "golangci-lint run -c configs/golangci.yml --fix --allow-parallel-runners --issues-exit-code 0 > /dev/null"
+run = "golangci-lint run --fix --allow-parallel-runners"
 
 [tasks.lint]
-run = "golangci-lint run -c configs/golangci.yml --allow-parallel-runners"
+run = "golangci-lint run --allow-parallel-runners"
 
 [tasks.test]
 run = "go test ./..."
