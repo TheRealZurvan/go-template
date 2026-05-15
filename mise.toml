@@ -20,6 +20,12 @@ run = "golangci-lint run --allow-parallel-runners"
 [tasks.test]
 run = "go test ./..."
 
+[tasks.check]
+depends = ["format", "lint", "test"]
+
+[tasks.pre-commit]
+depends = ["format", "lint"]
+
 [tasks.build]
 env = { CGO_ENABLED = "0", GOOS = "linux", GOARCH = "amd64" }
 run = 'go build -ldflags="-s -w" -trimpath -o bin/app cmd/app/main.go'
